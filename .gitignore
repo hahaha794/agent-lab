@@ -1,0 +1,50 @@
+# ============================================================
+# .gitignore —— 只对"本文件所在目录及其子目录"生效
+# 注意：.venv/.gitignore 和 .idea/.gitignore 各管各的，保护不到根目录的 .env
+# ============================================================
+
+# ---- 密钥（最高优先级：真实 key 永不提交）----
+.env
+.env.local
+.env.*.local
+
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- 本项目运行数据（练习产物，按需保留）----
+todos.json
+~$*.xlsx
+
+# ---- 历史遗留的错误文件名（todo.py 早期版本的 bug 产物，可删）----
+DATA_FILE
+
+# ---- 个人文件（不该进公开仓库）----
+*.pdf
+*.docx
+*.xlsx
+*.jpg
+*.jpeg
+*.png
+*.webp
+~$*
+
+# ---- 数据库 / 运行产物 ----
+*.db
+*.sqlite3
+
+# ---- 临时 / 备份 ----
+*.bak
+_stub/
